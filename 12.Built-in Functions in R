@@ -1,4 +1,13 @@
-#Built-in Function in R Programming Language
+# ***A simple R function to calculate area of a circle***
+ 
+areaOfCircle = function(radius){
+  area = pi*radius^2
+  return(area)
+}
+ 
+print(areaOfCircle(2))
+
+#***Built-in Function in R Programming Language***
 
 # *sum*
 print(sum(4:6))
