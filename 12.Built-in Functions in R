@@ -1,0 +1,218 @@
+#Built-in Function in R Programming Language
+
+# *sum*
+print(sum(4:6))
+# *min*
+print(min(4:6))
+# *max*
+print(max(4:6))
+
+#Other Built - In Functions
+ #**Mathematical Functions**
+
+# *Using abs() method* 
+answer1 <- abs(-12) 
+answer2 <- abs(21) 
+answer3 <- abs(-2) 
+
+print(answer1) 
+print(answer2) 
+print(answer3) 
+
+
+# *R code to calculate square root of a number* 
+
+x1 <- 25
+x2 <- 18
+
+# *Using sqrt() Function* 
+sqrt(x1) 
+sqrt(x2) 
+
+# *round() function*
+
+# Create example values
+x1 <- 1.2                          
+x2 <- 1.8
+x3 <- - 1.3
+x4 <- 1.7
+
+# Apply round function
+round(x1)                           
+round(x2)
+round(x3)
+round(x4)
+
+print(c(x1, x2, x3, x4))
+
+# Apply round function
+rounded_values <- round(c(x1, x2, x3, x4))
+
+# Print the original and rounded values
+print(cbind(c(x1, x2, x3, x4), rounded_values))
+
+# *Using exp() method*  
+answer1 <- exp(4)  
+answer2 <- exp(-3)   
+answer3 <- exp(0.0) 
+
+print(answer1)  
+print(answer2)  
+print(answer3)  
+
+# *R program to calculate log value*  
+print(log(1))  
+print(log(30))  
+print(log(0))  
+print(log(-44))  
+
+
+# *R code to calculate sine of a value* 
+
+# Assigning values to variables 
+x1 <- -90
+x2 <- -30
+
+# Using sin() Function 
+sin(x1) 
+sin(x2) 
+
+# *R code to calculate cosine of a value* 
+# Assigning values to variables 
+x1 <- 90
+x2 <- 30
+
+# Using cos() Function 
+cos(x1) 
+cos(x2) 
+
+
+# *R code to calculate tangent of a value* 
+
+# Assigning values to variables 
+x1 <- -90
+x2 <- -30
+
+# *Using tan() Function* 
+tan(x1) 
+tan(x2) 
+
+#**Statistical Functions**
+# *Arithmetic mean & median of a vector*
+
+# Creating a numeric vector 
+x1 <- c(1, 2, 3, 4, 5, 6) 
+x2 <-c(1.2, 2.3, 3.4, 4.5) 
+x3 <- c(-1, -2, -3, -4, -5, -6) 
+
+# Calling mean() function 
+mean(x1) 
+mean(x2) 
+mean(x3) 
+
+#Calling median() function
+median(x1) 
+median(x2) 
+median(x3) 
+
+# *Covariance & correlation of a vector*
+# Data vectors
+x <- c(1, 3, 5, 10)
+
+y <- c(2, 4, 6, 20)
+
+# Print covariance using different methods
+print(cov(x, y))
+print(cov(x, y, method = "pearson"))
+print(cov(x, y, method = "kendall"))
+print(cov(x, y, method = "spearman"))
+
+# Print correlation using different methods
+print(cor(x, y))
+
+print(cor(x, y, method = "pearson"))
+print(cor(x, y, method = "kendall"))
+print(cor(x, y, method = "spearman"))
+
+
+## *Variance & Standard deviation of a vector*
+# Create example vector 
+x <- c(1, 2, 3, 4, 5, 6, 7)
+
+# Apply var function in R  
+var(x)                        
+
+print(x) 
+
+# Compare with sd function 
+sd(x2)                           
+
+print(x2) 
+
+#**Data Manipulation Function**
+
+# *unique() function*
+
+# Initializing an input vector with some
+# duplicate values
+A <- c(1, 2, 3, 3, 2, 5, 6, 7, 6, 5)
+
+# Calling the unique() function over the
+# above vector to remove duplicate values
+unique(A)
+
+# *subset() function*
+# Create vector
+x <- 1:15
+
+# Print vector
+cat("Original vector: ", x, "\n")
+
+# Subsetting vector
+cat("First 5 values of vector: ", x[1:5], "\n")
+
+cat("Without values present at index 1, 2 and 3: ", 
+    x[-c(1, 2, 3)], "\n")
+
+# *Aggregate() function*
+
+# create a dataframe with 4 columns 
+data = data.frame(subjects=c("java", "python", "java", 
+                             "java", "php", "php"), 
+                  id=c(1, 2, 3, 4, 5, 6), 
+                  names=c("manoj", "sai", "mounika", 
+                          "durga", "deepika", "roshan"), 
+                  marks=c(89, 89, 76, 89, 90, 67)) 
+
+# display 
+print(data) 
+
+# aggregate sum of marks with subjects 
+print(aggregate(data$marks, list(data$subjects), FUN=sum)) 
+
+# aggregate minimum  of marks with subjects 
+print(aggregate(data$marks, list(data$subjects), FUN=min)) 
+
+# aggregate maximum of marks with subjects 
+print(aggregate(data$marks, list(data$subjects), FUN=max)) 
+
+# *order() function*
+
+# create a linear array
+arr <- c(9, 8, 7, 6, 5, 4, 3, 2, 1)
+
+# use of sort function to sort array 
+# by default it is sorted in increasing order
+sort(arr)
+# to sort in decreasing order
+sort(arr, decreasing = TRUE)
+
+#**File Input/Output Functions**
+
+# *Simple R program to read csv file*
+x <- read.csv("D://Datas//myfile.csv") #replace the file path with your file path
+     
+# print x
+print(x)
+
+# ***Other functions such as write.csv(), Read.table(), and write.table(), shall be expounded upon in forthcoming modules.***
