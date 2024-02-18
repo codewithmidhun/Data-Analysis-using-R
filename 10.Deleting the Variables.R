@@ -8,7 +8,7 @@ myComplex <- 5i
 cat("Variables in the current directory: \n") 
 ls() # returns all the variables created in the workspace 
 cat("\n") 
-cat("Deleting myRealNumeric and myDecimalNumeric \n\n") 
+cat("Deleting myRealNumeric and myDecimalNumeric \n") 
 rm(myRealNumeric, myDecimalNumeric) # delete the two mentioned variables 
 cat("Variables in the current directory, now: \n") 
 ls() # returns all the variables created in the workspace # myRealNumeric, myDecimalNumeric are now deleted 
